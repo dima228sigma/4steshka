@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: scroll;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin: 0;
+  padding: 0px;
+}
+.ticker {
+  position: relative;
+  overflow: hidden;
+}
+.ticker__wrapper {
+  display: flex;
+}
+
+.ticker__item {
+  font-family: sans-serif;
+  font-size: 52px;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 50px;
+  animation: ticker 5s linear infinite;
+  margin-top: 1px;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  margin-bottom: 20px;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 337px;
+  border: none;
+}
+
+.message {
+  font-size: 24px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.spoiler {
+  background-color: #000;
+  color: transparent;
+  user-select: none;
+}
+
+.spoiler:hover {
+  background-color: inherit;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.text {
+  width: 50%; /* Ограничивает ширину текста до половины экрана */
+  word-wrap: break-word; /* Переносит текст на следующую строку при достижении половины экрана */
+  font-size: 60px;
+}
+
+.clear {
+  clear: both; /* Переносит элемент на новую строку */
+}
